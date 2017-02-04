@@ -28,7 +28,7 @@ public class MainView extends Pane {
 		createPanel();
 		this.getChildren().addAll(button);
 		this.getChildren().addAll(panelLabel);
-	
+
 	}
 
 	public void createButtons() {
