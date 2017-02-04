@@ -1,5 +1,5 @@
 package application;
-	
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -11,7 +11,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Pane root = new MainView();
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,400,500);
 			
 			primaryStage.setScene(scene);
 			primaryStage.show();
