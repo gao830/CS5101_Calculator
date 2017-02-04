@@ -7,14 +7,18 @@ import javafx.scene.layout.Pane;
 
 
 public class Main extends Application {
+	final int width = 300;
+	final int height = 400;
 	@Override 
 	public void start(Stage primaryStage) {
 		try {
-			Pane root = new MainView();
-			Scene scene = new Scene(root,400,500);
+			Pane root = new MainView(width, height);
 			
+			Scene scene = new Scene(root,width,height);
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			System.out.println(primaryStage.getHeight());
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
