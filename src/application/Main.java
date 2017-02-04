@@ -3,12 +3,11 @@ package application;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 
 
 public class Main extends Application {
-	@Override
+	@Override 
 	public void start(Stage primaryStage) {
 		try {
 			Pane root = new MainView();
