@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 
 public class Main extends Application {
 	final int width = 300;
-	final int height = 400;
+	final int height = 350;
 	@Override 
 	public void start(Stage primaryStage) {
 		try {
