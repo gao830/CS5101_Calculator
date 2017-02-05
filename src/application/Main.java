@@ -19,7 +19,6 @@ public class Main extends Application {
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			System.out.println(primaryStage.getHeight());
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

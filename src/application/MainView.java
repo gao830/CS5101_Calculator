@@ -1,6 +1,6 @@
 package application;
 
-
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -42,7 +42,7 @@ public class MainView extends Pane {
 		button[0].setLayoutY(height - btnSize - 10);
 		button[0].setStyle("-fx-font-size: 2em; ");
 		button[0].setOnAction(e -> {
-			MainVC.buttonPressed(panelLabel, 1);
+			MainVC.numPressed(panelLabel, 0);
 		});
 		for (int i = 1; i < 4; i++) {
 			button[i] = new Button(String.valueOf(i));
@@ -50,7 +50,10 @@ public class MainView extends Pane {
 			button[i].setLayoutX(20 + (btnSize + 20) * (i - 1));
 			button[i].setLayoutY(height - 2 * (btnSize + 5));
 			button[i].setStyle("-fx-font-size: 2em; ");
-			
+			int num = i;
+			button[i].setOnAction(e -> {
+				MainVC.numPressed(panelLabel, num);
+			});
 
 		}
 		for (int i = 4; i < 7; i++) {
@@ -59,6 +62,10 @@ public class MainView extends Pane {
 			button[i].setLayoutX(20 + (btnSize + 20) * (i - 4));
 			button[i].setLayoutY(height - 3 * (btnSize + 5));
 			button[i].setStyle("-fx-font-size: 2em; ");
+			int num = i;
+			button[i].setOnAction(e -> {
+				MainVC.numPressed(panelLabel, num);
+			});
 
 		}
 		for (int i = 7; i < 10; i++) {
@@ -67,6 +74,10 @@ public class MainView extends Pane {
 			button[i].setLayoutX(20 + (btnSize + 20) * (i - 7));
 			button[i].setLayoutY(height - 4 * (btnSize + 5));
 			button[i].setStyle("-fx-font-size: 2em; ");
+			int num = i;
+			button[i].setOnAction(e -> {
+				MainVC.numPressed(panelLabel, num);
+			});
 
 		}
 		button[10] = new Button("+");
@@ -105,6 +116,9 @@ public class MainView extends Pane {
 		button[15].setLayoutX(20 + (btnSize + 20));
 		button[15].setLayoutY(height - btnSize - 10);
 		button[15].setStyle("-fx-font-size: 2em; ");
+		button[15].setOnAction(e -> {
+			MainVC.clearPressed(panelLabel);
+		});
 	}
 
 	public void createPanel() {
