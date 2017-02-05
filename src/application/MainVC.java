@@ -6,7 +6,8 @@ public class MainVC {
 
 	static String text = "0";
 
-	MainModel model = new MainModel();
+	static String operation;
+	static MainModel mainModel = new MainModel();
 
 	public static void numPressed(Label label, int value) {
 		// if (Integer.valueOf(text) == 0) {
@@ -14,17 +15,16 @@ public class MainVC {
 		// }
 		text = text + String.valueOf(value);
 		try {
-			
 			if (Integer.valueOf(text) < Integer.MAX_VALUE) {
-				
-				if (text.charAt(0)=='0'){
+
+				if (text.charAt(0) == '0') {
 					StringBuilder sb = new StringBuilder(text);
 					sb.deleteCharAt(0);
 					text = sb.toString();
 				}
 				label.setText(text);
 
-				System.out.println(Integer.valueOf(text));
+				// System.out.println(Integer.valueOf(text));
 			}
 		} catch (Exception e) {
 			text = "NUMBER TOO LARGE";
@@ -33,25 +33,72 @@ public class MainVC {
 		}
 	}
 
-	public static void operationsPressed(String operation, Label label) {
-		switch (operation) {
+	public static void operationsPressed(String operation1, Label label) {
+		switch (operation1) {
 		case "+":
-			System.out.println("+");
-
+			label.setText("+");
+			
+			mainModel.setFirstNum(Integer.valueOf(text));
+			System.out.println(Integer.valueOf(text));
+			operation = operation1;
+			text = "0";
 			break;
 
 		case "-":
-			System.out.println("-");
+			label.setText("-");
+			
+			mainModel.setFirstNum(Integer.valueOf(text));
+			System.out.println(mainModel.getFirstNum());
+			operation = operation1;
+			text = "0";
 			break;
 
 		case "*":
-			System.out.println("*");
+			label.setText("*");
+			
+			mainModel.setFirstNum(Integer.valueOf(text));
+			System.out.println(mainModel.getFirstNum());
+			operation = operation1;
+			text = "0";
 			break;
 
 		case "/":
-			System.out.println("/");
+			label.setText("/");
+			
+			mainModel.setFirstNum(Integer.valueOf(text));
+			System.out.println(mainModel.getFirstNum());
+			operation = operation1;
+			text = "0";
 			break;
 		}
+
+	}
+
+	public static void equalPressed(Label label) {
+		mainModel.setSecondNum(Integer.valueOf(text));
+		System.out.println("first:"+mainModel.getFirstNum());
+		System.out.println("second:"+mainModel.getSecondNum());
+		
+		switch (operation) {
+		case "+":
+			mainModel.addition();
+			break;
+		case "-":
+			mainModel.subtraction();
+			break;
+		case "*":
+			mainModel.multiplication();
+			break;
+		case "/":
+			mainModel.division();
+			break;
+		default:
+			break;
+		}
+		System.out.println(mainModel.getCalValue());
+		label.setText(String.valueOf(mainModel.getCalValue()));
+		text = "0";
+
 
 	}
 

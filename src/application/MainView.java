@@ -90,6 +90,9 @@ public class MainView extends Pane {
 		button[14].setLayoutX(20 + (btnSize + 20) * 2);
 		button[14].setLayoutY(height - btnSize - 10);
 		button[14].setStyle("-fx-font-size: 2em; ");
+		button[14].setOnAction(e -> {
+			MainVC.equalPressed(panelLabel);
+		});
 
 		button[10].setPrefSize(btnSize, btnSize * 0.6);
 		button[10].setLayoutX(20 + (btnSize + 20) * 3);
