@@ -14,6 +14,7 @@ public class Main extends Application {
 		try {
 			Pane root = new MainView(width, height);
 			
+			
 			Scene scene = new Scene(root,width,height);
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);

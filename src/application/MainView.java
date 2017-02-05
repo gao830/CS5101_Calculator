@@ -4,20 +4,23 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 
 public class MainView extends Pane {
 
 	Text text;
-	Button[] button = new Button[16];
+	public static Button[] button = new Button[16];
 
-	Label panelLabel;
+	public static Label panelLabel;
 
 	double width, height;
 
 	int btnSize = 50;
+
+	MainVC controller = new MainVC();
+	public MainView() {
+
+	}
 
 	public MainView(int width, int height) {
 
@@ -37,12 +40,16 @@ public class MainView extends Pane {
 		button[0].setLayoutX(20);
 		button[0].setLayoutY(height - btnSize - 10);
 		button[0].setStyle("-fx-font-size: 2em; ");
+		button[0].setOnAction(e -> {
+			MainVC.buttonPressed(panelLabel, 1);
+		});
 		for (int i = 1; i < 4; i++) {
 			button[i] = new Button(String.valueOf(i));
 			button[i].setPrefSize(btnSize, btnSize * 0.6);
 			button[i].setLayoutX(20 + (btnSize + 20) * (i - 1));
 			button[i].setLayoutY(height - 2 * (btnSize + 5));
 			button[i].setStyle("-fx-font-size: 2em; ");
+			
 
 		}
 		for (int i = 4; i < 7; i++) {
