@@ -1,9 +1,6 @@
 package application;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 43a87d57471a488dcb2fb49923d75ba034c79c58
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
