@@ -1,6 +1,5 @@
 package application;
 
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -96,21 +95,33 @@ public class MainView extends Pane {
 		button[10].setLayoutX(20 + (btnSize + 20) * 3);
 		button[10].setLayoutY(height - btnSize - 10);
 		button[10].setStyle("-fx-font-size: 2em; ");
+		button[10].setOnAction(e -> {
+			MainVC.operationsPressed("+", panelLabel);
+		});
 
 		button[11].setPrefSize(btnSize, btnSize * 0.6);
 		button[11].setLayoutX(20 + (btnSize + 20) * 3);
 		button[11].setLayoutY(height - 2 * (btnSize + 5));
 		button[11].setStyle("-fx-font-size: 2em; ");
+		button[11].setOnAction(e -> {
+			MainVC.operationsPressed("-", panelLabel);
+		});
 
 		button[12].setPrefSize(btnSize, btnSize * 0.6);
 		button[12].setLayoutX(20 + (btnSize + 20) * 3);
 		button[12].setLayoutY(height - 3 * (btnSize + 5));
 		button[12].setStyle("-fx-font-size: 2em; ");
+		button[12].setOnAction(e -> {
+			MainVC.operationsPressed("*", panelLabel);
+		});
 
 		button[13].setPrefSize(btnSize, btnSize * 0.6);
 		button[13].setLayoutX(20 + (btnSize + 20) * 3);
 		button[13].setLayoutY(height - 4 * (btnSize + 5));
 		button[13].setStyle("-fx-font-size: 2em; ");
+		button[13].setOnAction(e -> {
+			MainVC.operationsPressed("/", panelLabel);
+		});
 
 		button[15].setPrefSize(btnSize, btnSize * 0.6);
 		button[15].setLayoutX(20 + (btnSize + 20));
