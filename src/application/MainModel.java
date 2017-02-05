@@ -22,7 +22,9 @@ public class MainModel {
 		return secondNum;
 	}
 	
-	
+	public void setCalValue(int calValue){
+		this.calValue = calValue;
+	}
 	
 	public int getCalValue() {
 		return calValue;

@@ -6,7 +6,7 @@ public class MainVC {
 
 	static String text = "0";
 
-	static String operation;
+	static String operation = "";
 	static MainModel mainModel = new MainModel();
 
 	public static void numPressed(Label label, int value) {
@@ -37,8 +37,12 @@ public class MainVC {
 		switch (operation1) {
 		case "+":
 			label.setText("+");
-			
-			mainModel.setFirstNum(Integer.valueOf(text));
+			if (operation != "") {
+				mainModel.setSecondNum(Integer.valueOf(text));
+				equalPressed(label);
+			} else {
+				mainModel.setFirstNum(Integer.valueOf(text));
+			}
 			System.out.println(Integer.valueOf(text));
 			operation = operation1;
 			text = "0";
@@ -46,27 +50,39 @@ public class MainVC {
 
 		case "-":
 			label.setText("-");
-			
-			mainModel.setFirstNum(Integer.valueOf(text));
-			System.out.println(mainModel.getFirstNum());
+			if (operation != "") {
+				mainModel.setSecondNum(Integer.valueOf(text));
+				equalPressed(label);
+			} else {
+				mainModel.setFirstNum(Integer.valueOf(text));
+			}
+			System.out.println(Integer.valueOf(text));
 			operation = operation1;
 			text = "0";
 			break;
 
 		case "*":
 			label.setText("*");
-			
-			mainModel.setFirstNum(Integer.valueOf(text));
-			System.out.println(mainModel.getFirstNum());
+			if (operation != "") {
+				mainModel.setSecondNum(Integer.valueOf(text));
+				equalPressed(label);
+			} else {
+				mainModel.setFirstNum(Integer.valueOf(text));
+			}
+			System.out.println(Integer.valueOf(text));
 			operation = operation1;
 			text = "0";
 			break;
 
 		case "/":
 			label.setText("/");
-			
-			mainModel.setFirstNum(Integer.valueOf(text));
-			System.out.println(mainModel.getFirstNum());
+			if (operation != "") {
+				mainModel.setSecondNum(Integer.valueOf(text));
+				equalPressed(label);
+			} else {
+				mainModel.setFirstNum(Integer.valueOf(text));
+			}
+			System.out.println(Integer.valueOf(text));
 			operation = operation1;
 			text = "0";
 			break;
@@ -76,9 +92,9 @@ public class MainVC {
 
 	public static void equalPressed(Label label) {
 		mainModel.setSecondNum(Integer.valueOf(text));
-		System.out.println("first:"+mainModel.getFirstNum());
-		System.out.println("second:"+mainModel.getSecondNum());
-		
+		System.out.println("first:" + mainModel.getFirstNum());
+		System.out.println("second:" + mainModel.getSecondNum());
+
 		switch (operation) {
 		case "+":
 			mainModel.addition();
@@ -97,14 +113,15 @@ public class MainVC {
 		}
 		System.out.println(mainModel.getCalValue());
 		label.setText(String.valueOf(mainModel.getCalValue()));
+		mainModel.setFirstNum(mainModel.getCalValue());
 		text = "0";
-
-
+		operation = "";
 	}
 
 	public static void clearPressed(Label label) {
 		text = "";
 		label.setText("0");
+		mainModel.setCalValue(0);
 	}
 
 }
