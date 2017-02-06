@@ -65,4 +65,24 @@ public class MainUnitTest {
 		sum = tester.getCalValue();
 		assertEquals("7 * -11 must be -77", -77, sum);
 	}
+	@Test
+	public void division() {
+		tester.setFirstNum(5);
+		tester.setSecondNum(5);
+		tester.division();
+		int sum = tester.getCalValue();
+		assertEquals("5 / 5 must be 1", 1, sum);
+		
+		tester.setFirstNum(16);
+		tester.setSecondNum(4);
+		tester.division();
+		sum = tester.getCalValue();
+		assertEquals("16 / 4 must be 4", 4, sum);
+		
+		tester.setFirstNum(150);
+		tester.setSecondNum(10);
+		tester.division();
+		sum = tester.getCalValue();
+		assertEquals("150 - 10 must be 15", 15, sum);
+	}
 }
