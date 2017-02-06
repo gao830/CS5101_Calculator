@@ -2,6 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 =======
@@ -10,13 +12,16 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 =======
 <<<<<<< HEAD
+>>>>>>> 03eaa996cfa8de40dba047e858c17dde6ba9610d
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-=======
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+<<<<<<< HEAD
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+=======
 	<classpathentry kind="lib" path="C:/Users/Cody/Desktop/junit-4.12.jar"/>
 >>>>>>> bdf4ff2dca5532a379040c705bae52659784d6f8
 >>>>>>> 43a87d57471a488dcb2fb49923d75ba034c79c58
 >>>>>>> f026b01d991bc2370298b8e15e2ba5fd6b89876e
+>>>>>>> 03eaa996cfa8de40dba047e858c17dde6ba9610d
 	<classpathentry kind="output" path="bin"/>
 </classpath>
