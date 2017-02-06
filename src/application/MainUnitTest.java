@@ -25,4 +25,24 @@ public class MainUnitTest {
 		sum = tester.getCalValue();
 		assertEquals("7 + 11 must be 18", 18, sum);
 	}
+	@Test
+	public void subtract() {
+		tester.setFirstNum(5);
+		tester.setSecondNum(5);
+		tester.subtraction();
+		int sum = tester.getCalValue();
+		assertEquals("5 - 5 must be 0", 0, sum);
+		
+		tester.setFirstNum(9);
+		tester.setSecondNum(4);
+		tester.subtraction();
+		sum = tester.getCalValue();
+		assertEquals("9 - 4 must be 5", 5, sum);
+		
+		tester.setFirstNum(7);
+		tester.setSecondNum(11);
+		tester.subtraction();
+		sum = tester.getCalValue();
+		assertEquals("7 - 11 must be -4", -4, sum);
+	}
 }
