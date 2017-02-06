@@ -1,3 +1,3 @@
 # CS5101_Calculator
 
-Environment: Require JDK 8 (with JavaFX)
+This project requires JDK 8 (with JavaFX)
